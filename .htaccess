@@ -1,0 +1,24 @@
+RewriteEngine On
+# Edit below to match production web server
+# Note: If you plan to run the game in a directory (anything other than /) you'll need to update the paths in /includes/config.php and /backups/api_config.php
+RewriteBase /ashley-moodison/
+
+# /a/ => a.php
+RewriteRule ^([^/][a-z-]+)$ $1.php [QSA,L]
+
+# Profiles
+RewriteRule ^profile/([A-Za-z0-9-]+)$ profile.php?id=$1 [QSA,L]
+
+# Messages
+RewriteRule ^messages/([A-Za-z0-9-]+)$ messages.php?id=$1 [QSA,L]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "modification plus 2 weeks"
+  ExpiresByType image/jpeg "modification plus 2 weeks"
+  ExpiresByType image/gif "modification plus 2 weeks"
+  ExpiresByType image/png "modification plus 2 weeks"
+  ExpiresByType text/css "modification plus 2 weeks"
+  ExpiresByType text/x-javascript "modification plus 2 weeks"
+  ExpiresDefault "access plus 5 minutes"
+</IfModule>
