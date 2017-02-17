@@ -13,7 +13,7 @@ This is what you're looking for:
 1. FLAG: HonorablePreviousLiquidHorn
 2. FLAG: ParallelSkyIdentify
 3. FLAG: MountainRespectMadly
-4. FLAG: ParallelSkyIdentify
+4. FLAG: SkinnyOlivesAlmostWatching
 5. FLAG: HOLYSMOKESYOUDIDIT!
 
 ## Deployment Notes
